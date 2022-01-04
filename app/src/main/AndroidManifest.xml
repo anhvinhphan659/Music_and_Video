@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.music_and_video">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Music_and_Video">
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MusicCutterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoCutterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddVideoIntoPlaylistActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoJoiner"
+            android:exported="true" />
+        <activity
+            android:name=".MusicJoiner"
+            android:exported="true" />
+        <activity
+            android:name=".PlayVideoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PlayMusicActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MusicListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddPlaylistMusicActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddPlaylistVideoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddMusicIntoPlaylistActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="SMP">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

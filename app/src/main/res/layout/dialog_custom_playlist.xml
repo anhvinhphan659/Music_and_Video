@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_layout_add_playlist">
+    <TextView
+        android:id="@+id/txtNamePlayList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/bg_layout_playlist_title"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text = "Playlist name">
+    </TextView>
+    <Button
+        android:id="@+id/btnRename"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_button"
+        android:textSize="14dp"
+        android:text = "Rename">
+    </Button>
+    <Button
+        android:id="@+id/btnAddOrRemoveItem"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_button"
+        android:textSize="14dp"
+        android:text = "Add/Remove songs/videos">
+    </Button>
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_button"
+        android:textSize="14dp"
+        android:text = "Delete playlist">
+    </Button>
+
+</LinearLayout>

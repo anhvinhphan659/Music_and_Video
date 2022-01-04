@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_layout_add_playlist">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/bg_layout_playlist_title"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:text = "Type output name">
+    </TextView>
+    <TextView
+        android:id="@+id/msgNoteJoiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="16dp"
+        android:text = "Note">
+    </TextView>
+    <TextView
+        android:id="@+id/msgNote1Joiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:text = "Note">
+    </TextView>
+    <TextView
+        android:id="@+id/msgNote2Joiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="16dp"
+        android:text = "Note">
+    </TextView>
+    <TextView
+        android:id="@+id/msgNote3Joiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:text = "Note">
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtNameJoiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:padding="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        android:hint="File name">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCancelJoiner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_button"
+            android:textSize="14dp"
+            android:text = "Cancel">
+        </Button>
+
+        <Button
+            android:id="@+id/btnOkJoiner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_button"
+            android:textSize="14dp"
+            android:text = "Merge">
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>

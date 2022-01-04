@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@drawable/bg"
+    tools:context=".PlayVideoActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/topVV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBackPV"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/icons_back"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtTitlePV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="Video Name"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/VVplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topVV"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <VideoView
+            android:id="@+id/vvPlayVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:foregroundGravity="center"
+            android:keepScreenOn="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnGroupLinear"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingTop="1px"
+        android:paddingEnd="1px">
+
+        <ImageButton
+            android:id="@+id/btnSpeedControlPV"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="#00FFFAFA"
+            android:scaleType="fitXY"
+            android:src="@drawable/speed_control_w" />
+
+        <SeekBar
+            android:id="@+id/sbTimePV"
+            android:layout_width="358dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="89" />
+
+        <ImageButton
+            android:id="@+id/btnChangeOrientation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@android:drawable/ic_menu_always_landscape_portrait"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnGroupLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="20dp"
+        android:background="#00FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="1px"
+        android:paddingEnd="1px">
+
+        <ImageButton
+            android:id="@+id/btnPreviousPV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/music_play_skip_icon" />
+
+        <ImageButton
+            android:id="@+id/btnStopPV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/music_play_stop_icon" />
+
+        <ImageButton
+            android:id="@+id/btnPlayPV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/music_play_play_icon"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btnNextPV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/music_play_next_icon" />
+
+        <ImageButton
+            android:id="@+id/btnCaptureScreenPV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/capture_screen" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="1px"
+        android:paddingEnd="1px">
+
+        <TextView
+            android:id="@+id/txtCurrentTimePV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_weight="45"
+            android:text="00:00"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtTotalTimePV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_weight="45"
+            android:gravity="right"
+            android:text="00:00"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

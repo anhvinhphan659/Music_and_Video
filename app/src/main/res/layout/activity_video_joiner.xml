@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutVJ"
+    tools:context=".VideoJoiner">
+    <LinearLayout
+        android:id="@+id/headerVJ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnBackVJ"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/icons_back" />
+
+        <TextView
+            android:id="@+id/txtVJ"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="VIDEO JOINER"
+            android:textColor="@color/black"
+            android:background="@color/primaryColor"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txtTitleVJ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerVJ"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="   Video"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingLeft="10dp"
+            android:text="  Time"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listVJ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footerVJ"
+        android:layout_below="@id/txtTitleVJ" />
+
+    <LinearLayout
+        android:id="@+id/footerVJ"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primaryColor"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnAddVJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/btnRemoveVJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Remove" />
+
+            <Button
+                android:id="@+id/btnUpVJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Up" />
+
+            <Button
+                android:id="@+id/btnDownVJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Down" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnMergeVJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Merge" />
+
+            <TextView
+                android:id="@+id/msgExpVJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btnMergeVJ"
+                android:text="Export as: " />
+
+            <Spinner
+                android:id="@+id/spinnerTypeVJ"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:layout_toRightOf="@id/msgExpVJ"
+                android:background="@color/white"
+                tools:context=".SpinnerActivity" >
+            </Spinner>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

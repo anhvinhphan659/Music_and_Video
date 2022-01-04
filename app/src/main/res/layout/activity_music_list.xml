@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MusicListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnBackML"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/icons_back" >
+        </ImageButton>
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="MUSIC LIST"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/ImgBtn3Dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/icons_three_dots">
+        </ImageButton>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewPlayMusic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

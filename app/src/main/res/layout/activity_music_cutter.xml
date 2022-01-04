@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutMC"
+    tools:context=".MusicCutterActivity">
+    <LinearLayout
+        android:id="@+id/headerMC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnBackMC"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/icons_back" />
+
+        <TextView
+            android:id="@+id/txtMC"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="MUSIC CUTTER"
+            android:textColor="@color/black"
+            android:background="@color/primaryColor"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/footerMc"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primaryColor">
+
+        <TextView
+            android:id="@+id/msgStartMC"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/txtStartMC"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="Start: "
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txtStartMC"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+
+        <Button
+            android:id="@+id/btnStartMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="START"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/msgEndMC"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/txtEndMC"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="End: "
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txtEndMC"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/white"
+            android:text="00:00:00"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <org.florescu.android.rangeseekbar.RangeSeekBar
+        android:id='@+id/sbTimeVC'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerMc"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="100dp" />
+
+    <ImageButton
+        android:id="@+id/btnPlayCutter"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/footerMc"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="17dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_play_play_icon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerMC"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="70dp"
+        android:text="  File Choose" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerMC"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="70dp"
+        android:text="  Output file name (not contain extension):" />
+
+    <EditText
+        android:id="@+id/txtFileChooseMC"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="135dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:scrollHorizontally="false"
+        android:textColor="#000000"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/txtFileOutMC"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerMC"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="182dp"
+        android:layout_marginEnd="137dp"
+        android:ems="10"
+        android:minHeight="48dp"
+        android:textColor="#000000" />
+
+    <Spinner
+        android:id="@+id/spinnerTypeMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="92dp"
+        android:background="@color/white"
+        tools:context=".SpinnerActivity" />
+
+    <Button
+        android:id="@+id/btnBrowseMC"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerMC"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="20dp"
+        android:text="BROWSE" />
+
+
+
+</RelativeLayout>

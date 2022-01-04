@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".PlayMusicActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="Tên bài hát"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toEndOf="@+id/btnPrevious"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_play_play_icon" />
+
+    <ImageButton
+        android:id="@+id/btnPrevious"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="50dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_play_skip_icon" />
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toEndOf="@+id/btnPlay"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_play_stop_icon" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toEndOf="@+id/btnStop"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_play_next_icon" />
+
+    <SeekBar
+        android:id="@+id/sbTimePM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnPlay"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="26dp" />
+
+    <TextView
+        android:id="@+id/txtCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sbTimePM"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sbTimePM"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/imgCD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sbTimePM"
+        android:layout_below="@+id/txtTitle"
+        android:layout_marginTop="-42dp"
+        android:layout_marginBottom="42dp"
+        android:src="@drawable/music_play_cd_icon" />
+
+    <ImageButton
+        android:id="@+id/btnBackPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="368dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/icons_back" />
+
+    <ImageButton
+        android:id="@+id/btnRepeat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/sbTimePM"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/repeat" />
+
+    <ImageButton
+        android:id="@+id/btnSpeaker"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/sbTimePM"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toEndOf="@+id/btnRepeat"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/speaker" />
+
+    <ImageButton
+        android:id="@+id/btnSpeedControl"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/sbTimePM"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toStartOf="@+id/btnFavorite"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/speed_control" />
+    <ImageButton
+        android:id="@+id/btnFavorite"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/sbTimePM"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/favorite" />
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutMJ"
+    tools:context=".MusicJoiner">
+    <LinearLayout
+        android:id="@+id/headerMJ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnBackMJ"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/icons_back" />
+
+        <TextView
+            android:id="@+id/txtMJ"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="MUSIC JOINER"
+            android:textColor="@color/black"
+            android:background="@color/primaryColor"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txtTitleMJ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerMJ"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:text="   Music"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:textAlignment="center"
+            android:paddingLeft="10dp"
+            android:textSize="18dp"
+            android:text="  Time"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listMJ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footerMJ"
+        android:layout_below="@id/txtTitleMJ" />
+
+    <LinearLayout
+        android:id="@+id/footerMJ"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primaryColor"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnAddMJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/btnRemoveMJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Remove" />
+
+            <Button
+                android:id="@+id/btnUpMJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Up" />
+
+            <Button
+                android:id="@+id/btnDownMJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Down" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnMergeMJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Merge" />
+
+            <TextView
+                android:id="@+id/msgExpMJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btnMergeMJ"
+                android:text="Export as: " />
+
+            <Spinner
+                android:id="@+id/spinnerTypeMJ"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:layout_toRightOf="@id/msgExpMJ"
+                android:background="@color/white"
+                tools:context=".SpinnerActivity" >
+            </Spinner>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
