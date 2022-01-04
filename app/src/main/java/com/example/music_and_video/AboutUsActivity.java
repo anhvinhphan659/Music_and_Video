@@ -102,7 +102,7 @@ public class AboutUsActivity extends Activity {
                 .addGroup("Connect with us!")
                 .addEmail("anhvinhphan65@gmail.com", "Contract our leader")
                 .addFacebook("vinhphan659","Meet our leader on Facebook")
-                .addGitHub("anhvinhphan659/MediaSesProject")
+                .addGitHub("anhvinhphan659/Music_and_Video")
                 .addItem(developersElement)
                 .addItem(policyElement)
                 .addItem(createCopyright())
