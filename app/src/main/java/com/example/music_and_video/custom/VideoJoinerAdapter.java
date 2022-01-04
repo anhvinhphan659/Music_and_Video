@@ -54,7 +54,7 @@ public class VideoJoinerAdapter  extends ArrayAdapter<VJItem> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-
+        Glide.with(context).load(new File(VJList.get(position).getPath())).into(viewHolder.imgVJ);
         viewHolder.txtNameVJ.setText(VJList.get(position).getName());
         viewHolder.txtSizeVJ.setText(VJList.get(position).getSize());
         viewHolder.txtTimeVJ.setText(VJList.get(position).getDuration());

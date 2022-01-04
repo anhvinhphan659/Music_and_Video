@@ -74,7 +74,7 @@ public class Joiner {
         complex = complex + " -map [v] -map [a] ";
 
         String str_cmd = s + complex + "-metadata title=\""+outputName+"\" "+"\"" + finalVideo + "\"";
-        Toast.makeText(context.getApplicationContext(), str_cmd,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(context.getApplicationContext(), str_cmd,Toast.LENGTH_SHORT).show();
 
         ProgressDialog dialog = new ProgressDialog(context);
         dialog.setMessage("Please wait\nMerging ...\nDo not turn off the app to prevent memory leaking");
@@ -159,7 +159,7 @@ public class Joiner {
         complex = complex + "concat=n=" + n + ":v=0:a=1[out] -map [out] ";
 
         String str_cmd = s + complex + "-metadata title=\""+outputName+"\" "+ "\"" + finalMusic + "\"";
-        Toast.makeText(context.getApplicationContext(), str_cmd,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(context.getApplicationContext(), str_cmd,Toast.LENGTH_SHORT).show();
 
         ProgressDialog dialog = new ProgressDialog(context);
         dialog.setMessage("Please wait\nMerging ...\nDo not turn off the app to prevent memory leaking");
